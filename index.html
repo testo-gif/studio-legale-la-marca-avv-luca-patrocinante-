@@ -10,7 +10,7 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--navy:#1a2744;--gold:#c9a84c;--gold-light:#e8c96a;--cream:#faf8f3;--text:#2d3748}
-body{font-family:'Inter',sans-serif;color:var(--text);background:#fff}
+body{font-family:'Inter',sans-serif;color:var(--text);background:#fff;padding-top:40px}
 
 /* HERO */
 .hero{position:relative;height:100vh;min-height:580px;background:var(--navy);display:flex;align-items:center;justify-content:center;overflow:hidden}
@@ -85,9 +85,11 @@ nav.scrolled{background:var(--navy);box-shadow:0 2px 20px rgba(0,0,0,0.3)}
 .contact-value a{color:var(--gold);text-decoration:none}
 
 /* BANNER */
-.banner{background:linear-gradient(135deg,var(--navy),#2c3e6e);padding:80px 24px;text-align:center;color:#fff}
-.banner h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.6rem);font-weight:600;margin-bottom:16px}
-.banner p{color:rgba(255,255,255,0.7);margin-bottom:32px;font-size:16px}
+#buy-banner{position:fixed;top:0;left:0;width:100%;background:#000;color:#fff;z-index:9999;padding:10px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+#buy-banner p{font-size:14px;margin:0}
+#buy-banner a.stripe{background:#ff4d00;color:#fff;text-decoration:none;padding:8px 18px;border-radius:4px;font-size:13px;font-weight:500;white-space:nowrap;flex-shrink:0}
+@media(max-width:600px){#buy-banner .dt{display:none}}
+@media(min-width:601px){#buy-banner .mob{display:none}}
 
 /* FOOTER */
 footer{background:#111827;color:rgba(255,255,255,0.5);padding:32px 24px;text-align:center;font-size:13px}
@@ -123,7 +125,7 @@ footer a{color:rgba(255,255,255,0.4);text-decoration:none}
 </nav>
 
 <section class="hero">
-  <div class="hero-bg"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=Ab43m-vmmVpKtKks1VPQIp6xYUIOqbwWhZ3TZiWUWyveg0wwfRIudZtBzDAyrFaP9dHDpi3Mq2sG1l5-Qiijt2YyYgwD_TYZRry8HnvBc_ZwDbeZiwJ8JvgXUI3MyZwXcjcicvR67XhGXvCJCdhakFLhYRjBwUuRCp98TcbFcGAYL-PHJOjydKbPKtawcIyMZX5wZ0coC1x9pMBAxvox9KF1wHvTUmJ05Flw988JctzIGePkh-8522gN775fqZbUbtYgKtWeNVaphQkF615wCqsXQqpNNZm-8IifZfBiTZoL0sJ7ow&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM" alt="STUDIO LEGALE LA MARCA AVV. LUCA. PATROCINANTE IN CASSAZIONE." style="width:100%;height:100%;object-fit:cover;opacity:0.35"></div>
+  <div class="hero-bg"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=Ab43m-uP20C7LNAgzf1V5dHM8lKMB2xkn44BpF59n9fLszZBRR0DzIrXV32hOJZGJajg-hOrIo3UOPhFQfhqJbcqhSczPKUcFLv3mOZP2IYZuYRNzFmmmKC4U2WKG5FDZ3tnL2K2wdMv0Z-fTkMQqLcsOdnm-NLVTti-Udurasi3coZJlwx2MJzKbkT3QrrbSuVNXA9M5px3RZDDyYClu5f1b1DGt5LBLn2u_Z36frcbu6c86oVbAT1kV_ePHplgUI32aobY6cgtW5642PgA_syd51W8DMTe6ujEkf9FHShroVcz8g&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM" alt="STUDIO LEGALE LA MARCA AVV. LUCA. PATROCINANTE IN CASSAZIONE." style="width:100%;height:100%;object-fit:cover;opacity:0.35"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-badge">Studio legale · Bologna</div>
@@ -150,7 +152,7 @@ footer a{color:rgba(255,255,255,0.4);text-decoration:none}
         </div>
       </div>
       <div class="about-img">
-        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=700&photoreference=Ab43m-ucxKxrc6WjNP-RowvPs9EFDX5KEmh8dhnXX_YvWdjVXLnn6OJ5cJ_rhDQWgKVIgy9pvVoT1-gNn7LyxwA5w5CF7JhrodOVciRJhufB7puF9rVIwahJtoNy-7eE9XE2ZWcQ9ivWbGrFDUPZ6qWcNw9yPswb3hK6FD-5OOrTSlIpbVzWFC62uSgJNNXmmkM2AzMEu02MYfC049poIBD9mPEm4LwaFSr4Dqxfdt-meT-abfgcSVHkNeLHqXK34Bd5vOUzHDV8VEwwKp9vqdn2v41WuqcKxwUBihok0mOr_eUijw&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM" alt="STUDIO LEGALE LA MARCA AVV. LUCA. PATROCINANTE IN CASSAZIONE.">
+        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=700&photoreference=Ab43m-v4u1eCARMDwxZdQVplTkS1MCdSM1Qmy24_6r97QVzap_qXdJJ49K_50ouwFr_okJu4PRZPMAlx2jEhfLzu6Nv9zGpR0oi6m8rwKIIllgtOsdOLabIHNdtBtnHY9lj47h2Eyfd_CszWF2ad34NT5dAjt2TiQ3eGul7rDMDBulklQikOGAsSC0D37fklaNr_Fs6lADf6DvHdfM71uCH8DWpOyio4qbOxO8VWgf8P9NsKymIBGU9WBIbFxDLF_7tDDPPimBLN7NJJ3_XNrXjH2oZW4V1xnGwYTAwuDXaEJORMnA&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM" alt="STUDIO LEGALE LA MARCA AVV. LUCA. PATROCINANTE IN CASSAZIONE.">
       </div>
     </div>
   </div>
@@ -160,7 +162,7 @@ footer a{color:rgba(255,255,255,0.4);text-decoration:none}
   <div class="container">
     <h2 class="section-title">Servizi offerti</h2>
     <div class="services-grid"><div class="service-item"><div class="service-icon">⚖</div><span>Consulenza legale</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Diritto civile</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Diritto del lavoro</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Diritto penale</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Recupero crediti</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Contrattualistica</span></div></div>
-    <div class="photo-grid"><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-ucxKxrc6WjNP-RowvPs9EFDX5KEmh8dhnXX_YvWdjVXLnn6OJ5cJ_rhDQWgKVIgy9pvVoT1-gNn7LyxwA5w5CF7JhrodOVciRJhufB7puF9rVIwahJtoNy-7eE9XE2ZWcQ9ivWbGrFDUPZ6qWcNw9yPswb3hK6FD-5OOrTSlIpbVzWFC62uSgJNNXmmkM2AzMEu02MYfC049poIBD9mPEm4LwaFSr4Dqxfdt-meT-abfgcSVHkNeLHqXK34Bd5vOUzHDV8VEwwKp9vqdn2v41WuqcKxwUBihok0mOr_eUijw&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-sDQq7h_-T7jPR0L89vPXsSNGty3cUg-2BMR6llQJp4JvVHAK3QgTDTz_T46kD2pXdPr6dAymjKCmRceZ1k8WkwRrkUdJr9rE3W3kNYHGzqPPfRsinEl_j-xPP2iqzDSQqOAnmxOYTchgKqz6uihIcC7q6dpucsLrdRySGf8XWlUVWIIG5gAJZJMjZzfVEwAMF_lbNopzflu8PSp3BE_NfXpJi73BHqdyEqRujpV27YNLiVJx0NuvXY_i0ZMqNFVjxxsmAG1zMvI342I_Gf_0EtNy59kG3DfYSY3y8tfy2VSv3aPEObOuWQUk_iAFkE6IdUBJZP9qwBvTnhY_c8E5xjEfRZh74KoiXju7B6pj6t-8nEZ6Rmh1jRCiEgNUSFKF5gRZ0pS_Kq0Eifjo1uNS4ptXkAjlomPpAt9bPxAZerlEWH&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-uwh-PlQcIvEmSw9qtV95y9dFYdgqkKQtvEr2EoJUmq2cScL_HuRS0LFQWYyWyTEmw9nXhH87ygtrNp_X-Xy7qvdPVJCxu1oxrmYL1y82O5NX04ruDw7Hym2JQfWH3Ktr4yJUNsudZz_HGSZac1YYRTxxpylkbq0_hMAJNsfuw1sMGTrdtKT958ajUWW-U8i_CoKbH7uUFRhP6BCAIQqFX8FCoCRbak20akXti75QSEk-hCA3YMDkJOLrRxmWKy68Jxmu4NQ84fE7sNKOu3hqOiGqXVbSoXooQhQpIEWKh_YQ&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-uPEGHkcr4zFNDOxEFxxBbXyZh63Ws11OuIADzFdyJLGbpYNroDyb6VuUhXXytkwkY8yMySG5WToHQKsjEt52AAFC7B8698l5oy_HLqR8aQQEjyxytVD__2xL9cWO093LCYh6obBr_98pn5h3cMh2qU8NN5WLHuiI73rQugfJNyojOv8v9j9trd0ob0oi--21qWfnp3573ZQH4n2RKboTke8RWRG0wkxVZDM0VVTbyu8U7XwM7zENrKiZcMW3q8RfheptnnW9KvIE0zVVtq0YeWrlQYENEXId6J3l7xRXLNUg&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div></div>
+    <div class="photo-grid"><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-v4u1eCARMDwxZdQVplTkS1MCdSM1Qmy24_6r97QVzap_qXdJJ49K_50ouwFr_okJu4PRZPMAlx2jEhfLzu6Nv9zGpR0oi6m8rwKIIllgtOsdOLabIHNdtBtnHY9lj47h2Eyfd_CszWF2ad34NT5dAjt2TiQ3eGul7rDMDBulklQikOGAsSC0D37fklaNr_Fs6lADf6DvHdfM71uCH8DWpOyio4qbOxO8VWgf8P9NsKymIBGU9WBIbFxDLF_7tDDPPimBLN7NJJ3_XNrXjH2oZW4V1xnGwYTAwuDXaEJORMnA&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-uO6S1mQbqBhMHp61UJbhwKTd2vXJnxbsfxMNfvE2kWQKvVQQKBRRuEJ3NMqIfG_uskriI37ElVrxCwa9xPbeMq9cFuLxiIYlv2wfDQjkVxOUswZPRob90wU0PJT85umir0InEY3zXyHjaDiVtOMLSxEUkBzY8HS822ePYvnfIByl8Zg1MHvMV0wfe45FI1KU7mbVe3g4IjTWcgg80O-tmcMxOOLMdSh1sM8up-NvLzjI63PvuhmVkUXwevbuvAPREUNDh-CbKgLiW0V6FVArHW2iGBqIFhOwG_E4OUrh94I3-d_06DR7OrN5tn5PDLtHtX-VwoJeqHY6GKSHw9duYbTBOCAQrn512qkuXuqNu0Cd3kb-tmv1evt_MzrxJrCkOjnBh2-7-fX1Q5TSequFwwRCamn0utcp-l1Urpalns3jp1&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-u8WsdhUQvZtqTSZEk9a39WYwKuqdGUQFsP5H_JvZoMC0_veRNfn2Efa9qXYGrHs7Z9fmdxfjO_qLnZpvDrP2DYrlLPqZ5HtV9-yOKNkgi1C5XL2lQVofE1o34yGJrhCInqd_Khna2eDYsHOUtKfwwGEcpnjMhXlTVftgyIhWZmF13QsBQUkU_AtmPNGnEUmvVyox2inPP6i7roGnjEqLNJjMAaKHpkob9prG7BX5KZiTM2G7cV6kxnecijgTPFZX4mZbys8ZbL9FhPyJ7in_McNowUXYwfKFLutNww7qitnw&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-vHDRzYovIGwjJu9wJ9JWereKxd_e07wuap2uITC-rCsvWffNULo48b7T7UqW748mzGjsG3r210NJLO0y0-uqgQHprTROX33oO_WF3cRX-DDxQnWB-0X8zjUUJTlOnT6ZleAvEq4qwCt3N5Ua5Mu4VYcrGl4rT_rWkYc5JM9di2kXYVyyVjM3E2Zq6JwAvaUBKqyh1HkakzVv6jJavXEhbaWyw3AcduOL1HV9WZWPbMyhgI3hn8E6tSECTvYAH8iO9JTLlza1SN8a7inR_u6xZiUwvB8qfzN9m2S3OlzbDnJA&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div></div>
   </div>
 </section>
 
@@ -279,16 +281,19 @@ footer a{color:rgba(255,255,255,0.4);text-decoration:none}
       <div class="contact-card"><div class="contact-icon">📞</div><div class="contact-label">Telefono</div><div class="contact-value"><a href="tel:+39 348 903 9561">+39 348 903 9561</a></div></div>
       <div class="contact-card"><div class="contact-icon">📍</div><div class="contact-label">Indirizzo</div><div class="contact-value">Via Alessandro Corticelli,  29, 40141 Bologna</div></div>
       <div class="contact-card"><div class="contact-icon">🏛</div><div class="contact-label">Specializzazione</div><div class="contact-value">Studio legale</div></div>
+      <div class="contact-card" style="text-align:left">
+  <div class="contact-icon" style="text-align:center">🕐</div>
+  <div class="contact-label" style="text-align:center;margin-bottom:12px">Orari</div>
+  <table style="font-size:13px;width:100%"><tr><td style="padding:5px 16px 5px 0;">Lunedì</td><td style="color:rgba(255,255,255,0.8);">09–12:30 / 16–19</td></tr><tr><td style="padding:5px 16px 5px 0;font-weight:700;color:var(--gold)">Martedì</td><td style="color:#fff;font-weight:700;color:var(--gold)">09–12:30 / 16–19</td></tr><tr><td style="padding:5px 16px 5px 0;">Mercoledì</td><td style="color:rgba(255,255,255,0.8);">09–12:30 / 16–19</td></tr><tr><td style="padding:5px 16px 5px 0;">Giovedì</td><td style="color:rgba(255,255,255,0.8);">09–12:30 / 16–19</td></tr><tr><td style="padding:5px 16px 5px 0;">Venerdì</td><td style="color:rgba(255,255,255,0.8);">09–12:30 / 16–19</td></tr><tr><td style="padding:5px 16px 5px 0;">Sabato</td><td style="color:#e53e3e;">Chiuso</td></tr><tr><td style="padding:5px 16px 5px 0;">Domenica</td><td style="color:#e53e3e;">Chiuso</td></tr></table>
+</div>
     </div>
   </div>
 </section>
 
-<div class="banner">
-  <div class="container">
-    <h2>Vuoi un sito come questo per il tuo studio?</h2>
-    <p>Simplo crea siti web professionali in 24 ore per studi legali, notai e professionisti.</p>
-    <a href="https://buy.stripe.com/8x25kC7mo39M0bN1Mv1B601" class="btn-primary">Scopri Simplo →</a>
-  </div>
+<div id="buy-banner">
+  <p class="dt">Ti piace questo sito? Il tuo potrebbe essere identico — online in 5 giorni per €99</p>
+  <p class="mob">Vuoi un sito così? €99</p>
+  <a href="https://buy.stripe.com/8x25kC7mo39M0bN1Mv1B601" target="_blank" class="stripe">Inizia ora →</a>
 </div>
 
 <footer>
